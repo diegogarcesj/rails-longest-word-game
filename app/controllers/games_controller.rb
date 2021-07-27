@@ -23,7 +23,5 @@ class GamesController < ApplicationController
     else
       @result = 0 # Not in the grid
     end
-
-
   end
 end
