@@ -1,0 +1,14 @@
+<h1>Result</h1>
+
+<p>
+<% case @result %>
+<% when 0 %>
+  Sorry but <strong><%=params[:word].upcase%></strong> can't be built out of <%=@letters.join(', ')%>
+<% when 1 %>
+  <strong>Congratulations!</strong> <%=params[:word].upcase%> is a valid English word!
+<% when 2 %>
+  Sorry but <strong> <%=params[:word].upcase%></strong> does not seem to be a valid English word...
+<% end %>
+</p>
+
+<%= link_to 'Play again', new_path %>
