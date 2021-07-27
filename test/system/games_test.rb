@@ -7,11 +7,12 @@ class GamesTest < ApplicationSystemTestCase
     assert_selector "li", count: 10
   end
 
-  test "Ir a new, llenar el input y click en el submit y comprobar la respuesta" do
+  test "Ir a new, llenar con palabra random, click en submit y obtener mensaje que no esta en la cuadricula" do
     visit new_url
-    fill_in "word", with: "asdasd"
+    random_word = Array.new(10) { ("A".."Z").to_a.sample }.join
+    fill_in "word", with: random_word
     click_on "Play"
 
-    assert_text "Sorry but ASDASD can't be built out of"
+    assert_text "Sorry but #{random_word.upcase} can't be built out of"
   end
 end
