@@ -9,13 +9,18 @@ a {
   color: #3398DC;
   text-decoration: none;
 }
-.square-blue {
+
+ul {
+  padding: 0px;
+}
+
+li.square-blue {
   display: inline-block;
   width: 32px;
   height: 32px;
   text-align: center;
   padding: 10px;
-  margin: 5px;
+  margin-left: 0px;
   background-color: #3398DC;
   color: #FFF;
   font-size: 28px;
